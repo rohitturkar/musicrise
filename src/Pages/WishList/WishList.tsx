@@ -1,10 +1,10 @@
 import React from "react";
 
-import { AiTwotoneHeart, AiOutlineHeart } from "react-icons/ai";
+import {AiOutlineHeart } from "react-icons/ai";
 import { FaHeart } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import { useSelector,useDispatch } from "react-redux";
-import type { RootState, AppDispatch } from "../../Store/store";
+import type { RootState} from "../../Store/store";
 import { ADD_CART_DATA } from "../../Store/cartSlice";
 import { ADD_WISHLIST_DATA,REMOVE_WISHLIST_DATA } from "../../Store/wishlistSlice";
 
