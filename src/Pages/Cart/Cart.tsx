@@ -1,5 +1,4 @@
-import React from "react";
-import { Trash, Heart } from "lucide-react";
+import { Trash} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { AiTwotoneHeart, AiOutlineHeart } from "react-icons/ai";
 import { BiWinkSmile } from "react-icons/bi";

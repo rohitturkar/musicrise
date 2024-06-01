@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Footer() {
   return (
     <section className="relative overflow-hidden bg-white py-8">

@@ -1,5 +1,3 @@
-import React from "react";
-
 import {AiOutlineHeart } from "react-icons/ai";
 import { FaHeart } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
