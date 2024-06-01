@@ -5,15 +5,15 @@ import { Menu, X } from "lucide-react";
 import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai";
 import { BsFillPersonFill } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
-import { useContext } from "react";
-import { CartContext } from "../../main";
+
 import { useSelector } from "react-redux";
+import { RootState } from "../../Store/store";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const cartData = useSelector((state) => state?.cart?.cartData);
-  const wishlistData = useSelector((state) => state?.wishlist?.wishlistData);
+  const cartData = useSelector((state:RootState) => state?.cart?.cartData);
+  const wishlistData = useSelector((state:RootState) => state?.wishlist?.wishlistData);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
