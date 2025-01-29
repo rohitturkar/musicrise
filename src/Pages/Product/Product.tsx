@@ -37,12 +37,16 @@ export default function Product() {
     if (snapshot.exists()) {
       const myData = snapshot.val();
 
+      console.log(myData, "myData");
+
       const tempArray = Object.keys(myData).map((elementId) => {
         return {
           ...myData[elementId],
           id: elementId,
         };
       });
+
+      console.log(tempArray, "myData 1");
 
       setLoading(false);
       dispatch(ADD_SERVER_DATA(tempArray));
@@ -113,26 +117,25 @@ export default function Product() {
 
           <div className="h-[400px] w-full rounded-lg border-2 border-dashed px-2 lg:col-span-12 lg:h-full">
             <div className="mx-auto grid w-full max-w-6xl items-center space-y-4 px-2 py-5 md:grid-cols-2 md:gap-5 md:space-y-0 lg:grid-cols-3 ">
-              {filteredData?.length === 0  && loading ? (
-               <>
-               {[...Array(6)].map((_, index) => (
-                 <div key={index} className="rounded-md border-2 h-full text-left relative">
-                 
-                   
-                   <div className="flex justify-center items-center h-[200px] bg-gray-300 w-full"></div>
-                   <div className="text-left flex flex-col gap-2 px-2 mt-2 py-2">
-                     <p className="bg-gray-200 w-[50%] px-10 py-2 text-left rounded-md"></p>
-                     <p className="bg-gray-200 w-[20%] px-10 py-2 text-left rounded-md"></p>
-                   </div>
-                   
-                   <div className="p-2 mt-5">
-                     <div className="py-4 px-20 bg-gray-200 rounded-md"></div>
-                   </div>
-                 </div>
-               ))}
-             </>
-             
-             
+              {filteredData?.length === 0 && loading ? (
+                <>
+                  {[...Array(6)].map((_, index) => (
+                    <div
+                      key={index}
+                      className="rounded-md border-2 h-full text-left relative"
+                    >
+                      <div className="flex justify-center items-center h-[200px] bg-gray-300 w-full"></div>
+                      <div className="text-left flex flex-col gap-2 px-2 mt-2 py-2">
+                        <p className="bg-gray-200 w-[50%] px-10 py-2 text-left rounded-md"></p>
+                        <p className="bg-gray-200 w-[20%] px-10 py-2 text-left rounded-md"></p>
+                      </div>
+
+                      <div className="p-2 mt-5">
+                        <div className="py-4 px-20 bg-gray-200 rounded-md"></div>
+                      </div>
+                    </div>
+                  ))}
+                </>
               ) : (
                 <>
                   {" "}
